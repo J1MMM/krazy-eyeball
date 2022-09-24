@@ -15,22 +15,3 @@ main{
 .eye, #eyes{
     position: absolute;
 }
-.switch{
-    background-color: #fff;
-    width: 5rem;
-    height: 2rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: end;align-items: center;
-    position: absolute;
-    bottom: 1rem;
-    transition-duration: 1s;
-}
-.circle{
-    background-color: rgb(92, 92, 92);
-    width: 1.9rem;
-    height: 1.9rem;
-    border-radius: 100%;
-    cursor: pointer;
-    transition-duration: 1s;
-}

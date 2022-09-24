@@ -1,11 +1,8 @@
 // function showPosition(event){
 //     console.log("X axis:" + event.clientX + " | Y axis:" + event.clientY)
 // }
+console.log('pogiko');
 const anchor = document.getElementById('anchor');
-//switch
-const switchBtn = document.querySelector('.switch');
-const switchCircle = document.querySelector('.circle');
-
 
 //calculate position of achor elements
 const rect = anchor.getBoundingClientRect();
@@ -25,9 +22,10 @@ document.addEventListener('mousemove', (e) => {
     eyes.forEach(eye => {
         eye.style.transform = `rotate(${90 + angelDeg}deg)`
     });
+    //HUE
     anchor.style.filter = `hue-rotate(${angelDeg}deg)`
 })
-
+//comput angle deg
 function angle(cx, cy, ex, ey){
     const dy = ey - cy;
     const dx = ex - cx;
@@ -37,8 +35,3 @@ function angle(cx, cy, ex, ey){
     const deg = rad * 180 / Math.PI;
     return deg
 }
-switchCircle.addEventListener('click', () => {
-    switchBtn.style.justifyContent == 'end' ?
-    switchBtn.style.justifyContent = 'start' :
-    switchBtn.style.justifyContent = 'end';
-})
