@@ -3,7 +3,7 @@
 // }
 console.log('pogiko');
 const anchor = document.getElementById('anchor');
-
+anchor.ondragstart = function() { return false; };
 //calculate position of achor elements
 const rect = anchor.getBoundingClientRect();
 //get the middle of achor
@@ -20,7 +20,9 @@ document.addEventListener('mousemove', (e) => {
     //rotate the eye
     const eyes = document.querySelectorAll('.eye')//array of eyes
     eyes.forEach(eye => {
-        eye.style.transform = `rotate(${90 + angelDeg}deg)`
+        eye.style.transform = `rotate(${90 + angelDeg}deg)`;
+        eye.ondragstart = function() { return false; };
+
     });
     //HUE
     anchor.style.filter = `hue-rotate(${angelDeg}deg)`
